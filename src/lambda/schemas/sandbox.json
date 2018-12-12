@@ -1,0 +1,22 @@
+{
+    "handlers": {
+        "myHandler1": {
+            "runtime": "nodejs8.10",
+            "event": "ref/my-sample-event.json",
+            "environmentVariables": {
+                "MY_ENV_VARIABLE": "MY_VALUE"
+            }
+        },
+        "myHandler2": {
+            "runtime": "python3.6",
+            "event": {
+                "myProperty": {
+                    "prop1": "mydata1",
+                    "prop2": "mydata2"
+                }
+            }
+        },
+        "myHandler3": {
+        }
+    }
+}
