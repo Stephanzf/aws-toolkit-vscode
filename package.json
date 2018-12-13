@@ -63,6 +63,12 @@
                 "label": "%AWS.lambda.debug.node.label%"
             }
         ],
+        "jsonValidation": [
+            {
+                "fileMatch": "/.aws/handlers.json",
+                "url": "./out/src/lambda/schemas/handlers.schema.json"
+            }
+        ],
         "viewsContainers": {
             "activitybar": [
                 {
@@ -194,8 +200,8 @@
     "scripts": {
         "vscode:prepublish": "npm run compile",
         "bundleDeps": "node ./build-scripts/bundleDeps.js",
-        "compile": "tsc -p ./ && npm run lint && npm run bundleDeps",
-        "watch": "tsc -watch -p ./",
+        "compile": "copyfiles src/lambda/schemas/*.schema.json out && tsc -p ./ && npm run lint && npm run bundleDeps",
+        "watch": "copyfiles src/lambda/schemas/*.schema.json out && tsc -watch -p ./",
         "postinstall": "node ./node_modules/vscode/bin/install",
         "test": "npm run compile && node ./test-scripts/test.js",
         "lint": "tslint --project .",
@@ -211,6 +217,7 @@
         "@types/node": "^7.0.43",
         "@types/request": "^2.47.1",
         "@types/xml2js": "^0.4.3",
+        "copyfiles": "^2.1.0",
         "decache": "^4.4.0",
         "del": "^3.0.0",
         "glob": "^7.1.3",
