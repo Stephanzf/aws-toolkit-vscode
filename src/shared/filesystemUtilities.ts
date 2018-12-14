@@ -34,3 +34,9 @@ export async function readFileAsString(path: string, encoding?: string): Promise
 
     return result
 }
+
+export async function readFileAsJson<T>(path: string, encoding?: string): Promise<T> {
+    const content = await readFileAsString(path, encoding)
+
+    return JSON.parse(content) as T
+}
