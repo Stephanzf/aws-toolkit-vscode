@@ -27,6 +27,7 @@
         "onCommand:aws.deployLambda",
         "onCommand:aws.getLambdaConfig",
         "onCommand:aws.getLambdaPolicy",
+        "onCommand:aws.lambda.createNewSamApp",
         "onDebugInitialConfigurations"
     ],
     "main": "./out/src/extension",
@@ -127,6 +128,11 @@
             ]
         },
         "commands": [
+            {
+                "command": "aws.lambda.createNewSamApp",
+                "title": "[REPLACEME] Create new SAM Application",
+                "category": "AWS"
+            },
             {
                 "command": "aws.login",
                 "title": "%AWS.command.login%",
