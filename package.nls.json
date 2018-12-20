@@ -16,6 +16,7 @@
     "AWS.command.newLambda": "New Lambda Function or Serverless App",
     "AWS.command.deployLambda": "Deploy Lambda Function",
     "AWS.command.invokeLambda": "Invoke Lambda Function",
+    "AWS.command.refreshLambdaExplorer": "Refresh",
     "AWS.command.getLambdaConfig": "Get Lambda Function Configuration",
     "AWS.command.getLambdaPolicy": "Get Lambda Function Policy",
     "AWS.error.mfa.userCancelled": "User cancelled entering authentication code",

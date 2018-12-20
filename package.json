@@ -96,6 +96,11 @@
                     "command": "aws.invokeLambda",
                     "when": "view == lambda",
                     "group": "navigation@4"
+                },
+                {
+                    "command": "aws.refreshLambdaExplorer",
+                    "when": "view == lambda",
+                    "group": "navigation@5"
                 }
             ],
             "view/item/context": [
@@ -173,6 +178,15 @@
             {
                 "command": "aws.invokeLambda",
                 "title": "%AWS.command.invokeLambda%",
+                "category": "AWS",
+                "icon": {
+                    "light": "resources/light/invoke_lambda.svg",
+                    "dark": "resources/dark/invoke_lambda.svg"
+                }
+            },
+            {
+                "command": "aws.refreshLambdaExplorer",
+                "title": "%AWS.command.refreshLambdaExplorer%",
                 "category": "AWS",
                 "icon": {
                     "light": "resources/light/invoke_lambda.svg",
